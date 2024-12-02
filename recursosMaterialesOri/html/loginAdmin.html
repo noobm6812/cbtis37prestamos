@@ -1,0 +1,33 @@
+<!--Kael Santiago Guerrero Dominguez-->
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/logincss.css">
+    <link rel="icon" href="img/icon.ico">
+   
+    <head>
+        <title> Inicio de sesión </title>
+    </head>
+    <body>
+        <header class="Header">
+            <a href="../index.html" class="logo">
+                <img src="img/logo.png" class="logo" alt="logo">
+            </a>
+    
+           
+        </header>
+        <div class="sesion">
+            <form id="formulario" action="loginAdminphp.php" method="post">
+                <h1> Ingresando como administrador </h1>
+                <label for="id">ID:</label><br>
+                <input type="number" id="idAdmin" name="idAdministrador" placeholder="ID del administrador" required class="input"><br><br>
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" id="contra" name="contraseña"required class="input"><br><br>
+              
+                <button type="submit" class="btn"> Iniciar sesión </button>
+            </form>
+        </div>
+        
+    </body>
+</html>

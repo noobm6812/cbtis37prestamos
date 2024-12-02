@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--Lourdes Soto!-->
+<html>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/logincss.css">
+    <link rel="icon" href="icon.ico">
+   
+    <head>
+        <title> Inicio de sesión </title>
+    </head>
+    <body>
+
+        <header class="Header">
+            <a href="../index.html" class="logo">
+                <img src="img/logo.png" class="logo" alt="logo">
+            </a>
+    
+           
+        </header>
+
+        <div class="sesion">
+            <form id="formulario" action="loginUsuariophp.php" method="post">
+                <h1> Ingresando como usuario </h1>
+                
+                <label for="id">ID:</label><br>
+                <input type="number" id="id" name="idUsuario" placeholder="ID del usuario" required class="input"><br><br>
+               
+                <label for="pass">Contraseña:</label>
+                <input type="password" id="contra" name="Contraseña" placeholder="Contraseña" required class="input"><br><br>
+              
+                <button type="submit" class="btn"> Iniciar sesión </button>
+            </form>
+        </div>
+        
+    </body>
+</html>

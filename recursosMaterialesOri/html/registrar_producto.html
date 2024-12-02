@@ -1,0 +1,55 @@
+<!-- Lourdes Soto-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/registropro.css">
+    <title>Registro de Productos</title>
+    <link rel="icon" href="img/icon.ico">
+    
+</head>
+
+<body>
+    <header class="Header">
+        <a href="../index.html" class="logo">
+            <img src="img/logo.png" class="logo" alt="logo">
+        </a>
+
+        <nav class="navbar">
+            <ul class="menu">
+                <li class="item"><a href="menuAdministrador.html" class="link">Menu</a></li>
+                <li class="item"><a href="consulta_prestamo.php" class="link">Cosnulta Prestamos</a></li>
+                <li class="item"><a href="registro.html" class="link">Registrar Usuario</a></li>
+                <li class="item"><a href="registrarDevolucion.html" class="link">Registrar Devolucion</a></li>
+
+
+            </ul>
+            <div class="menu-icon">
+                <i class="menubtn" onclick="togglemenu()"><img src="menu-btn.png" width="30" height="30"
+                        alt="boton menu"> </i>
+            </div>
+
+        </nav>
+    </header>
+    <div id="my">
+        <form id="myForm" action="registrar_producto.php" method="post">
+            <h1>REGISTRO DE PRODUCTOS</h1>
+
+
+            <label for="nombre_producto">Nombre del Producto:</label>
+            <input type="text" id="nombre_producto" name="nombreProducto" placeholder="Nombre del Producto"
+                required><br><br>
+
+            <label for="cantidad_producto">Cantidad de Producto:</label>
+            <input type="number" id="cantidad_producto" name="cantidadProducto" placeholder="Cantidad de Producto"
+                required><br><br>
+
+            <br><br>
+            <button type="submit">Registrar Producto</button>
+        </form>
+    </div>
+</body>
+
+</html>

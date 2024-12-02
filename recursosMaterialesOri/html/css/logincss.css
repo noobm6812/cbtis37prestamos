@@ -1,0 +1,187 @@
+/* Lourdes Yesenia Soto Arias */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: url('img1/fondo.jpeg') no-repeat center fixed;
+    background-size: cover; /* Ajusta la imagen de fondo para que cubra toda la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    transition: 0.7;
+    padding: 30px 20px;
+    z-index: 10;
+}
+
+.Header.abajo {
+    background: #c36bdd;
+    padding: 15px 20px;
+}
+
+.menu-icon{
+    display: none;
+}
+
+.menu-icon i{
+color:white;
+font-size: 30px;
+
+
+
+}
+
+.Header .logo {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2em;
+    letter-spacing: 2px;
+    transition: 1.5s;
+    text-decoration: none;
+}
+
+.navbar {
+    padding: 10px 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    height: 70px;
+    
+}
+
+.Header .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Header .menu .item {
+    list-style-type: none;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;    
+
+}
+
+.Header .menu .item .link {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #f8f4f2;
+    font-weight: 600;
+    font-size: 20px;
+   
+}
+
+.menu .item .link:hover {
+    color: rgb(53, 51, 51);
+    border-radius: 15px;
+}
+
+
+.sesion {
+    margin: 100px 20px 20px 20px;
+    width: 90%;
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.1); /* Fondo ligeramente transparente */
+    color: aliceblue;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 30px 40px;
+  
+}
+
+.sesion h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.sesion .input {
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    padding: 20px;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+}
+
+.sesion .input input::placeholder {
+    color: #fff;   
+}
+
+.sesion .btn {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.sesion .btn:hover {
+    background: #f2f2f2; /* Cambia el color de fondo al pasar el mouse */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .sesion {
+        padding: 20px 30px;
+    }
+    .sesion h1 {
+        font-size: 28px;
+    }
+    .sesion .input {
+        margin: 20px 0;
+        padding: 15px;
+    }
+    .sesion .btn {
+        height: 40px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sesion {
+        padding: 15px 20px;
+    }
+    .sesion h1 {
+        font-size: 24px;
+    }
+    .sesion .input {
+        margin: 15px 0;
+        padding: 10px;
+    }
+    .sesion .btn {
+        height: 35px;
+        font-size: 12px;
+    }
+}

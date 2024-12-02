@@ -1,0 +1,65 @@
+<!-- Guerrero Dominguez Kael Santiago-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/devocss.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title> Devoluciones </title>
+</head>
+
+<body>
+    <header class="Header">
+        <a href="../index.html" class="logo">
+            <img src="img/logo.png" class="logo" alt="logo">
+        </a>
+
+        <nav class="navbar">
+            <ul class="menu">
+                <li class="item"><a href="menuUsuario.html" class="link">Menu</a></li>
+                <li class="item"><a href="Articulos.html" class="link">Articulos</a></li>
+                <li class="item"><a href="prestamo.html" class="link">Prestamos</a></li>
+            </ul>
+            <div class="menu-icon">
+                <i class="menubtn" onclick="togglemenu()"><img src="menu-btn.png" width="30" height="30"
+                        alt="boton menu"> </i>
+            </div>
+
+        </nav>
+    </header>
+
+    <form id="devolucionForm">
+        <div>
+            <h1> Devolucion de préstamos </h1>
+            <label> Introduzca el ID del préstamo a devolver </label>
+            <input type="number" name="idPrestamo"> <br>
+            <button type="submit"> Confirmar Devolución </button>
+
+        </div>
+    </form>
+    <script>
+        $(document).ready(function () {
+            $('#devolucionForm').on('submit', function (event) {
+                event.preventDefault(); // Evitar el envío normal del formulario
+
+                $.ajax({
+                    url: 'devoluciones.php',
+                    type: 'POST',
+                    data: $(this).serialize(), // Serializar los datos del formulario
+                    success: function (response) {
+                        // Mostrar el alert con la respuesta del servidor
+                        alert(response);
+                    },
+                    error: function () {
+                        alert('Error al procesar la solicitud.');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+
+</html>

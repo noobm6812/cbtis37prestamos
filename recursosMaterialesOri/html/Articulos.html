@@ -1,0 +1,111 @@
+<!--Kael Santiago Guerrero Dominguez!-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artículos</title>
+    <link rel="stylesheet" href="css/artcss.css">
+</head>
+<body>
+
+    <header class="Header">
+        <a href="../index.html" class="logo">
+            <img src="img/logo.png" class="logo" alt="logo">
+        </a>
+
+        <nav class="navbar">
+            <ul class="menu">
+                <li class="item"><a href="menuUsuario.html" class="link">Menu</a></li>
+                <li class="item"><a href="prestamo.html" class="link">Prestamo</a></li>
+                <li class="item"><a href="devoluciones.html" class="link">Devoluciones</a></li>
+            </ul>
+            <div class="menu-icon">
+                <i class="menubtn" onclick="togglemenu()"><img src="menu-btn.png" width="30" height="30"
+                        alt="boton menu"> </i>
+            </div>
+
+        </nav>
+    </header>
+
+    <h1 class="titulo">Artículos Disponibles</h1>
+
+    <div class="carousel">
+        <div class="carousel-wrapper">
+            <div class="producto">
+                <img src="img/AdapHDMI.jpg" alt="Imagen Adaptador">
+                <div class="nombre">Adaptador HDMI</div>
+                <a href="prestamo.html" class="boton">Solicitar Articulo</a>
+            </div>
+            <div class="producto">
+                <img src="img/bocin.jpg" alt="Imagen Bocinas">
+                <div class="nombre">Bocina</div>
+                <a href="prestamo.html" class="boton">Solicitar Articulo</a>
+            </div>
+            <div class="producto">
+                <img src="img/silicon.jpg" alt="Imagen de Pistola de Silicon">
+                <div class="nombre">Pistola de Silicon</div>
+                <a href="prestamo.html" class="boton">Solicitar Articulo</a>
+            </div>
+            <div class="producto">
+                <img src="img/Microf.jpg" alt="Imagen de Microfono">
+                <div class="nombre">Microfono</div>
+                <a href="prestamo.html" class="boton">Solicitar Articulo</a>
+            </div>
+            <div class="producto">
+                <img src="img/Exten.jpg" alt="Imagen de Extensiones">
+                <div class="nombre">Extensiones</div>
+                <a href="prestamo.html" class="boton">Solicitar Articulo</a>
+            </div>
+                <div class="producto">
+                    <img src="img/ConAirAcond.jpg" alt="Imagen de pilas de aire acondicionada">
+                    <div class="nombre">Pilas de aire acondicionado</div>
+                    <a href="prestamo.html" class="boton">Solicitar Articulo</a>
+                </div>
+            
+                <div class="producto">
+                    <img src="img/Perfor.jpg" alt="Imagen de perforadora">
+                    <div class="nombre">Perforadora</div>
+                    <a href="prestamo.html" class="boton">Solicitar Articulo</a>
+                </div>
+            
+                <div class="producto">
+                    <img src="img/guillo.jpg" alt="Imagen de guillotina">
+                    <div class="nombre">Guillotina</div>
+                    <a href="prestamo.html" class="boton">Solicitar Articulo</a>
+                </div>
+            
+                <div class="producto">
+                    <img src="img/cartucho.jpg" alt="Imagen de cartucho de tinta">
+                    <div class="nombre">Cartucho de tinta para impresora</div>
+                    <a href="prestamo.html" class="boton">Solicitar Articulo</a>
+                </div>
+            
+            </div>
+        </div>
+        
+    </div>
+
+   <script>
+        let currentIndex = 0;
+        const totalProducts = document.querySelectorAll('.producto').length;
+        const productWidth = document.querySelector('.producto').offsetWidth;
+
+        function moveCarousel(direction) {
+            const carouselWrapper = document.querySelector('.carousel-wrapper');
+            if (direction === 'next') {
+                currentIndex = (currentIndex + 1) % totalProducts;
+            } else {
+                currentIndex = (currentIndex - 1 + totalProducts) % totalProducts;
+            }
+
+            carouselWrapper.style.transform = `translateX(-${currentIndex * productWidth}px)`;
+        }
+
+        document.querySelector('.prev-arrow').addEventListener('click', () => moveCarousel('prev'));
+        document.querySelector('.next-arrow').addEventListener('click', () => moveCarousel('next'));
+    </script>
+
+
+</body>
+</html>

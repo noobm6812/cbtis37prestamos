@@ -1,0 +1,195 @@
+   /* Soto Arias Lourdes Yesenia */
+   body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+display: flex;
+justify-content: space-around;
+transition: 0.7;
+padding: 30px 20px;
+z-index: 10;
+}
+
+.Header.abajo {
+background: #c36bdd;
+padding: 15px 20px;
+}
+
+.menu-icon{
+display: none;
+}
+
+.menu-icon i{
+color:white;
+font-size: 30px;
+
+
+
+}
+
+.Header .logo {
+width: 100px;
+height: 100px;
+position: relative;
+color: #fff;
+font-weight: bold;
+font-size: 2em;
+letter-spacing: 2px;
+transition: 1.5s;
+text-decoration: none;
+}
+
+.navbar {
+padding: 10px 150px;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 30px;
+position: relative;
+height: 70px;
+
+}
+
+.Header .menu {
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.Header .menu .item {
+list-style-type: none;
+color: rgb(0, 0, 0);
+text-decoration: none;
+font-weight: bold;    
+
+}
+
+.Header .menu .item .link {
+position: relative;
+font-family: Arial, Helvetica, sans-serif;
+margin: 0 15px;
+text-decoration: none;
+color: #500e0e;
+font-weight: 600;
+font-size: 20px;
+
+}
+
+.menu .item .link:hover {
+color: rgb(53, 51, 51);
+border-radius: 15px;
+}
+
+
+.titulo {
+    text-align: center;
+    color: #333;
+    margin: 100px 0 40px 0
+}
+
+.carousel {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.producto {
+    min-width: 200px;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.producto img {
+    max-width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.nombre {
+    font-size: 18px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.boton {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.boton:hover {
+    background-color: #0056b3;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.prev-arrow {
+    left: 20px;
+}
+
+.next-arrow {
+    right: 20px;
+}
+
+@media (max-width: 768px) {
+    .carousel-wrapper {
+        flex-direction: column;
+    }
+
+    .producto {
+        margin: 10px auto;
+        min-width: calc(100% - 20px);
+    }
+
+    .arrow {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 980px) {
+    .titulo {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .arrow { display: none;
+     }
+
+    .boton {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+ 
+}
+
